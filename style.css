@@ -1,0 +1,217 @@
+/* ---------------- RESET & BOX SIZING ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevents vertical and horizontal scrollbars */
+  font-family: Arial, sans-serif;
+}
+
+/* ---------------- NAVBAR SECTION ---------------- */
+nav {
+  background-color: #2b8ca3;
+  padding: 10px 30px;
+  width: 100%;
+  height: 60px;
+  white-space: nowrap; /* Keeps all inline-block columns on a single line */
+  font-size: 0; /* Removes whitespace gaps between inline-block elements */
+}
+
+.logo {
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.menu-list {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.menu-list ul {
+  list-style: none;
+}
+
+.menu-list li {
+  display: inline-block;
+  margin: 0 18px;
+}
+
+.menu-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.2s ease;
+}
+
+.menu-list a:hover {
+  opacity: 0.85;
+}
+
+.username {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.username span {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #2b8ca3;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- HERO SECTION ---------------- */
+main {
+  width: 100%;
+  /* Subtracts Navbar (60px) + Footer (50px) to lock section within 100vh */
+  height: calc(100vh - 110px); 
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 6vw;
+  font-size: 0; /* Prevents whitespace overflow between left & right divs */
+  white-space: nowrap;
+}
+
+.hero-left,
+.hero-right {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  vertical-align: middle;
+  white-space: normal; /* Restores normal text wrapping inside the divs */
+  font-size: 16px;
+}
+
+/* Left Hero Content */
+.hero-left {
+  padding-right: 4vw;
+}
+
+.hero-left-content {
+  /* Vertical alignment helper without flexbox */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-heading {
+  font-size: 4.8vh;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 2.5vh;
+}
+
+.highlight-text {
+  color: #2b8ca3;
+}
+
+.hero-description {
+  font-size: 2vh;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 3.5vh;
+  max-width: 38vw;
+}
+
+.hero-btn {
+  background-color: #2b8ca3;
+  color: #ffffff;
+  border: none;
+  padding: 1.4vh 2.2vw;
+  font-size: 1.9vh;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #216d7f;
+}
+
+/* Right Hero Content */
+.hero-right {
+  text-align: right;
+}
+
+.hero-img-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 38vw;
+  max-height: 52vh;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- FOOTER SECTION ---------------- */
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #2b8ca3;
+  color: #ffffff;
+  padding: 0 6vw;
+  line-height: 50px;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.footer-left,
+.footer-right {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.footer-right a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
